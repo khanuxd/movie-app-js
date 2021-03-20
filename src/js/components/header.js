@@ -1,15 +1,15 @@
 import { starsRating } from '../utils/starsRating';
 export const header = ({
-  title,
-  image,
-  rating,
-  releaseDate,
-  voteCount,
-  genresString,
+    title,
+    image,
+    rating,
+    releaseDate,
+    voteCount,
+    genresString,
 }) => {
-  image = image.replace('w500', 'original');
+    image = image.replace('w500', 'original');
 
-  const headerHtmlString = `       
+    const headerHtmlString = `
             <header class="header">
                 <div class="header__navbar">
                     <div class="header__logo">
@@ -22,6 +22,7 @@ export const header = ({
                         </div>
                         <a href="#" class="button button--light header__link">Log In</a>
                         <a href="#" class="button button--dark header__link">Sign Up</a>
+                        <i class="fas fa-th-large header__mobile__menu"></i>
                     </div>
                 </div>
                 <div class="header__movie--container">
@@ -36,13 +37,13 @@ export const header = ({
                             <div class="header__movie__genres">${genresString}</div>
                             <div class="header__movie-cta">
                                 <button type="button" class="button button--dark">Watch Trailer</button>
-                                <button type="button" class="button button--light">View Info</button>
+                                <button type="button" class="button button--light button__view--info">View Info</button>
                                 <button type="button" class="button button--light">+ Add to wishlist</button>
                             </div>
                         </div>
                         <div class="header__movie__rating--box">
                             <div class="header__rating--val">
-                                <div>
+                                <div class="rating--heading">
                                     Rating<span> (${voteCount} reviews)</span>
                                 </div>
                                 <div class="stars--box">
@@ -55,8 +56,8 @@ export const header = ({
                         </div>
                     </div>
                 </div>
-            </header>       
+            </header>
     `;
 
-  return headerHtmlString;
+    return headerHtmlString;
 };
