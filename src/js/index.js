@@ -7,6 +7,7 @@ import { scrollFunction } from './utils/scrollNavbar';
 import { onContentNavbarClick } from './utils/onContentNavbarClick';
 import { onSearchIconClick } from './utils/onSearchIconClick';
 import { onHeartIconClick } from './utils/onHeartIconClick';
+import { singleMoviePage } from './components/single-page.component';
 import {
   fetchTrendingMovies,
   fetchTopRatedMovies,
@@ -80,6 +81,14 @@ window.addEventListener('load', async function () {
       heartIcons.forEach((heartIcon) =>
         heartIcon.addEventListener('click', function () {
           onHeartIconClick(this);
+        })
+      );
+
+      //5) Adding single page render to movie card
+      const movieCards = document.querySelectorAll('.movie');
+      movieCards.forEach((movieCard) =>
+        movieCard.addEventListener('click', function () {
+          singleMoviePage(this);
         })
       );
     }, 1500);

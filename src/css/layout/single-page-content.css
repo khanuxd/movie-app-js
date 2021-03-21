@@ -1,0 +1,4 @@
+.single-movie__content {
+  padding: var(--gutter-vertical);
+  display: flex;
+}

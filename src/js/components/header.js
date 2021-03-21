@@ -7,6 +7,7 @@ export const header = ({
   releaseDate,
   voteCount,
   genresString,
+  videoKey,
 }) => {
   image = image.replace('w500', 'original');
 
@@ -36,7 +37,7 @@ export const header = ({
                             </div>
                             <div class="header__movie__genres">${genresString}</div>
                             <div class="header__movie-cta">
-                                <button type="button" class="button button--dark">Watch Trailer</button>
+                                <a href="https://www.youtube.com/watch?v=${videoKey}" class="button button--dark" target="_blank">Watch Trailer</a>
                                 <button type="button" class="button button--light">View Info</button>
                                 <button type="button" class="button button--light">+ Add to wishlist</button>
                             </div>

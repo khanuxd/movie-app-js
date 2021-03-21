@@ -1,4 +1,4 @@
-const config = {
+export const config = {
   apiKey: 'd62e25cc965456f2bfb986baf6380cbf',
   host: `https://api.themoviedb.org/3/`,
   imagePath: 'https://image.tmdb.org/t/p/w500/',
@@ -146,7 +146,7 @@ export const getGenresString = (movies, genres) => {
 export const fetchWishlistMovies = () => {
   let wishListMovies = JSON.parse(localStorage.getItem('wishListMovies')) || [];
   wishListMovies = wishListMovies.map((movie) => ({ ...movie, chosen: true }));
-  console.log(wishListMovies);
+
   return wishListMovies;
 };
 
@@ -165,5 +165,43 @@ const checkIdenticalMovies = (moviesFromAPI, moviesFromLocalStorage) => {
         moviesFromAPI[i].chosen = true;
       }
     }
+  }
+};
+
+export const fetchSingleMovie = async (id, config) => {
+  const url = config.getUrl(
+    `movie/${id}?api_key=`,
+    '&append_to_response=videos'
+  );
+
+  try {
+    const response = await fetch(url);
+    const {
+      backdrop_path,
+      homepage,
+      title,
+      overview,
+      poster_path,
+      vote_average,
+      vote_count,
+      videos,
+      release_date,
+      production_countries,
+    } = await response.json();
+
+    return {
+      title,
+      overview,
+      homepage,
+      rating: vote_average,
+      voteCount: vote_count,
+      image: `${config.imagePath}${poster_path}`,
+      backdropImage: `${config.imagePath}${backdrop_path}`,
+      videoKey: videos.results[0].key,
+      release_date,
+      countries: production_countries.map((obj) => obj.name).join(', '),
+    };
+  } catch (error) {
+    console.log(error);
   }
 };
