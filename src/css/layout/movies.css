@@ -4,7 +4,8 @@
 
 .section--trending-movies,
 .section--top-rated-movies,
-.section--new-arrival-movies {
+.section--new-arrival-movies,
+.section--wishlist-movies {
   display: none;
 }
 

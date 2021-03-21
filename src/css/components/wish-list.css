@@ -1,19 +1,12 @@
-
 .wish-list .wish-icon {
-    position: absolute;
-    top: 2rem;
-    right:2rem;
-    font-size: 3rem;
-    color: var(---color-yellow)
-  }
-  
-  .wish-list .active-wish {
-    border-radius: 50%;
-    position: absolute;
-    top: 2rem;
-    right:2rem;
-    font-size: 3rem;
-    color: var(---color-yellow);
-    color: red;
-  }
-  
+  color: var(---color-yellow);
+}
+
+.wish-list .active-wish {
+  border-radius: 50%;
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  font-size: 3rem;
+  color: var(--color-secondary);
+}

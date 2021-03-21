@@ -6,12 +6,15 @@ import { loader } from './components/loader';
 import { scrollFunction } from './utils/scrollNavbar';
 import { onContentNavbarClick } from './utils/onContentNavbarClick';
 import { onSearchIconClick } from './utils/onSearchIconClick';
+import { onHeartIconClick } from './utils/onHeartIconClick';
 import {
   fetchTrendingMovies,
   fetchTopRatedMovies,
   fetchArrivalMovies,
   fetchGenres,
   getGenresString,
+  fetchWishlistMovies,
+  checkChosenMovies,
 } from './data/data';
 window.addEventListener('load', async function () {
   const root = document.querySelector('#root');
@@ -26,19 +29,24 @@ window.addEventListener('load', async function () {
     const topRatedMovies = await fetchTopRatedMovies();
     const arrivalMovies = await fetchArrivalMovies();
     const genres = await fetchGenres();
+    //fetching wishlist movies from localStorage
+    const wishlistMovies = fetchWishlistMovies();
+
     movies = {
       trendingMovies,
       topRatedMovies,
       arrivalMovies,
     };
     movies = getGenresString(movies, genres);
+    movies = checkChosenMovies(movies, wishlistMovies);
+
     const mostPopularMovie = movies.trendingMovies[0];
     //I did not know how to check whether the data is ready to show up so I used a little trick with setTimeout :)))
     // How about finding a way to check if the banner iamge is ready, it will scream 'readyyyy' and then the spinner stops
     setTimeout(() => {
       rootHtmlString = `      
     ${header(mostPopularMovie)}
-    ${content(movies, genres)}   
+    ${content(movies, genres, wishlistMovies)}   
     ${footer()}
   `;
       //replace the loader with the populated data
@@ -66,6 +74,14 @@ window.addEventListener('load', async function () {
       searchIcon.addEventListener('click', function () {
         onSearchIconClick(this);
       });
+
+      //4) Adding movie to wishlist in localStorage
+      const heartIcons = document.querySelectorAll('.movie__heart-icon');
+      heartIcons.forEach((heartIcon) =>
+        heartIcon.addEventListener('click', function () {
+          onHeartIconClick(this);
+        })
+      );
     }, 1500);
   } catch (error) {
     console.log(error);

@@ -142,3 +142,28 @@ export const getGenresString = (movies, genres) => {
   }
   return movies;
 };
+
+export const fetchWishlistMovies = () => {
+  let wishListMovies = JSON.parse(localStorage.getItem('wishListMovies')) || [];
+  wishListMovies = wishListMovies.map((movie) => ({ ...movie, chosen: true }));
+  console.log(wishListMovies);
+  return wishListMovies;
+};
+
+export const checkChosenMovies = (movies, wishListMovies) => {
+  const { trendingMovies, topRatedMovies, arrivalMovies } = movies;
+  checkIdenticalMovies(trendingMovies, wishListMovies);
+  checkIdenticalMovies(topRatedMovies, wishListMovies);
+  checkIdenticalMovies(arrivalMovies, wishListMovies);
+  return movies;
+};
+
+const checkIdenticalMovies = (moviesFromAPI, moviesFromLocalStorage) => {
+  for (let i = 0; i < moviesFromAPI.length; i++) {
+    for (let j = 0; j < moviesFromLocalStorage.length; j++) {
+      if (moviesFromAPI[i].id == moviesFromLocalStorage[j].id) {
+        moviesFromAPI[i].chosen = true;
+      }
+    }
+  }
+};

@@ -16,6 +16,18 @@
   transform: scale(1.02);
 }
 
+.movie__heart-icon {
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  font-size: 2.5rem;
+  z-index: 2000;
+}
+
+.movie__heart-icon.chosen {
+  color: var(--color-secondary);
+}
+
 .movie__img__container {
   overflow: hidden;
   border-top-left-radius: 0.5rem;

@@ -1,4 +1,5 @@
 import { starsRating } from '../utils/starsRating';
+
 export const header = ({
   title,
   image,

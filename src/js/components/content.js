@@ -1,32 +1,15 @@
 import { card } from './card';
-import { genresDropdownList } from './genres-list';
+import { contentNavbar } from './content-navbar';
+import { wishListMoviesComponent } from './wishListMovies.component';
 
-export const content = (movies, genres) => {
-
- 
-  let moviewish = JSON.parse(localStorage.getItem("wishList")) || []
-  const onClickWish = (event) =>{
-     moviewish = JSON.parse(localStorage.getItem("wishList")) || []
-     document.getElementById("wish__container").innerHTML = ` ${card(moviewish)}`
-    }
-  window.onclick = onClickWish;
-
-  
+export const content = (movies, genres, wishlistMovies) => {
   try {
     const { trendingMovies, topRatedMovies, arrivalMovies } = movies;
 
     const contentHtmlString = `  
         <div class="content">
 
-            <nav class="content__navbar">
-              <div class="content__navbar__item active">Trending</div>
-              <div class="content__navbar__item">Top Rated</div>
-              <div class="content__navbar__item">New Arrivals</div>
-              <div class="content__navbar__item">Wish List</div>
-              <div class="content__navbar__item select--dropdown">${genresDropdownList(
-                genres
-              )}</div>
-            </nav>
+           ${contentNavbar(genres)}
             
             <section class="section--movies active section--trending-movies">              
               <div class="movies__container">
@@ -45,10 +28,11 @@ export const content = (movies, genres) => {
                 ${card(arrivalMovies)}
               </div>
             </section>
-            <section class="section--movies active section--trending-movies">              
-              <div id = "wish__container" class=".wish-list movies__container onclick = "onClickWish(event)" >
-              </div>
+
+            <section class="section--movies section--wishlist-movies">
+              ${wishListMoviesComponent(wishlistMovies)}
             </section>
+
         </div>
       `;
 
