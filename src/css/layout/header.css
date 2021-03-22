@@ -117,11 +117,6 @@
   color: var(--color-white);
 }
 
-/*
-*  Need to make it black when scroll for the yellow background
-* need to add js for mobile menu to be activated.
-*/
-
 .header__navbar .header__mobile__menu {
   display: none;
   color: var(--color-primary);
@@ -260,16 +255,6 @@
   .header__logo {
     font-size: 2rem;
   }
-
-  /* .header__navbar .button--dark,
-  .header__navbar .button--light,
-  .header__navbar .header__search {
-    display: none;
-  } */
-
-  /* .header__navbar .header__mobile__menu {
-    display: block;
-  } */
 
   .header__movie--content {
     text-align: center;
