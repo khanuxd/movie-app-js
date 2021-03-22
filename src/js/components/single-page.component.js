@@ -5,7 +5,8 @@ import { header } from './header';
 import { footer } from './footer';
 
 export const singleMoviePage = async (movieImage) => {
-  const root = movieImage.parentNode.parentNode.parentNode.parentNode;
+  const root =
+    movieImage.parentNode.parentNode.parentNode.parentNode.parentNode;
 
   let rootHtmlString;
   //Showing the loader when the document start loading
