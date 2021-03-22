@@ -1,7 +1,33 @@
+/* Targets the full dorpdown box shown initially */
+
 .select--dropdown {
+  display: flex;
+  align-items: center;
+  border: none;
+  position: relative;
+  padding: 0;
+  margin: 0;
+  width: 200px;
 }
 
+/* targets the icon with the dropdown */
+
+.select--dropdown .fas {
+  padding: 5px;
+  position: absolute;
+  right: 1rem;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+/* will show the selected item from dropdown */
+
 .genres__list--dropdown {
+  padding: var(--gutter-vertical);
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.5rem;
+  border: none;
+  appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
@@ -17,15 +43,21 @@
   border-radius: 2px;
   font-size: inherit;
   overflow: hidden;
-  padding-top: 2px;
-  padding-bottom: 2px;
-  padding-left: 1rem;
   text-overflow: ellipsis;
-  white-space: nowrap;
   cursor: pointer;
 }
 
-select::-ms-expand {
+.genres__list--dropdown:hover {
+  color: var(--color-secondary);
+}
+
+.genres__list--dropdown .select__item {
+  padding: 2rem;
+  color: var(--color-black);
+  background: var(--color-primary);
+}
+
+.genres__list--dropdown::-ms-expand {
   display: none;
 }
 
