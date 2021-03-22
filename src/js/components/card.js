@@ -9,7 +9,7 @@ export const card = (movies) => {
                 <div class="movie__heart-icon ${
                   chosen ? 'chosen' : ''
                 }" data-id="${id}" data-title="${title}" data-image="${image}" data-rating="${rating}" data-release-date="${releaseDate}" data-genres-string="${genresString}" data-chosen="${true}">
-                    <i class="far fa-heart"></i>
+                    <i class="fas fa-heart"></i>
                 </div>     
 
                 <div class="movie__img__container">

@@ -8,16 +8,6 @@
   -webkit-user-select: none;
   -moz-user-select: none;
   user-select: none;
-  -webkit-padding-end: 20px;
-  -moz-padding-end: 20px;
-  -webkit-padding-start: 2px;
-  -moz-padding-start: 2px;
-  background-color: var(--color-secondary);
-  background-image: url(../../assets/img/select-arrow.svg),
-    linear-gradient(to bottom, #ffffff, #ffffff);
-  background-position: 60% center;
-  background-repeat: no-repeat;
-  background-size: contain;
   outline: none;
   border: none;
   border-radius: 2px;
