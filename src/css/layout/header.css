@@ -261,15 +261,15 @@
     font-size: 2rem;
   }
 
-  .header__navbar .button--dark,
+  /* .header__navbar .button--dark,
   .header__navbar .button--light,
   .header__navbar .header__search {
     display: none;
-  }
+  } */
 
-  .header__navbar .header__mobile__menu {
+  /* .header__navbar .header__mobile__menu {
     display: block;
-  }
+  } */
 
   .header__movie--content {
     text-align: center;
