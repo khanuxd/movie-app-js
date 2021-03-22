@@ -11,9 +11,7 @@ export const genresDropdownList = (genres) => {
 
 const getGenresName = (genresArray) => {
   let genreOptions = `
-    <option id="select__label" class="select__item selected">
-    Genres
-    </option>
+    <option id="select__label" class="select__item" selected>Genres &#8690;</option>
   `;
   genresArray.forEach((genreName) => {
     genreOptions += `

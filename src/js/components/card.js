@@ -5,14 +5,14 @@ export const card = (movies) => {
   movies.forEach(
     ({ id, title, image, rating, releaseDate, genresString, chosen }) => {
       cardsHtmlString += `          
-            <div class="movie" data-id="${id}" data-genres-string="${genresString}">
+            <div class="movie">
                 <div class="movie__heart-icon ${
                   chosen ? 'chosen' : ''
                 }" data-id="${id}" data-title="${title}" data-image="${image}" data-rating="${rating}" data-release-date="${releaseDate}" data-genres-string="${genresString}" data-chosen="${true}">
-                    <i class="far fa-heart"></i>
+                    <i class="fas fa-heart"></i>
                 </div>     
 
-                <div class="movie__img__container">
+                <div class="movie__img__container" data-id="${id}" data-genres-string="${genresString}">
                     <img class="movie__img" src=${image} alt="${title} poster" />
                 </div>
                 

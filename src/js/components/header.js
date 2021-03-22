@@ -14,7 +14,7 @@ export const header = ({
             <header class="header">
                 <div class="header__navbar">
                     <div class="header__logo">
-                        <a class="header__link" href="#">MOVIEBOX</a>
+                        <a class="header__link" href="./index.html">MOVIEBOX</a>
                     </div>
                     <div class="header__button">
                         <div class="header__search">
