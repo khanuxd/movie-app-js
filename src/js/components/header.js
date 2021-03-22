@@ -1,32 +1,17 @@
 import { starsRating } from '../utils/starsRating';
 
 export const header = ({
-<<<<<<< HEAD
-  title,
-  image,
-  rating,
-  releaseDate,
-  voteCount,
-  genresString,
-  videoKey,
-=======
     title,
     image,
     rating,
     releaseDate,
     voteCount,
     genresString,
->>>>>>> responsiveFixing
 }) => {
     image = image.replace('w500', 'original');
 
-<<<<<<< HEAD
-  const headerHtmlString = `       
-            <header class="header" id="header">
-=======
     const headerHtmlString = `
             <header class="header">
->>>>>>> responsiveFixing
                 <div class="header__navbar">
                     <div class="header__logo">
                         <a class="header__link" href="#">MOVIEBOX</a>
@@ -52,13 +37,8 @@ export const header = ({
                             </div>
                             <div class="header__movie__genres">${genresString}</div>
                             <div class="header__movie-cta">
-<<<<<<< HEAD
-                                <a href="https://www.youtube.com/watch?v=${videoKey}" class="button button--dark" target="_blank">Watch Trailer</a>
-                                <button type="button" class="button button--light">View Info</button>
-=======
                                 <button type="button" class="button button--dark">Watch Trailer</button>
                                 <button type="button" class="button button--light button__view--info">View Info</button>
->>>>>>> responsiveFixing
                                 <button type="button" class="button button--light">+ Add to wishlist</button>
                             </div>
                         </div>
