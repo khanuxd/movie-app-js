@@ -124,12 +124,6 @@
   cursor: pointer;
 }
 
-/* !!!IMPortant: could not fix the SingIn button on scrolling navbar. I guess something to do with the scrollNavbar.js file to add the class "scroll" */
-
-/* .header__link.button--light.scroll:hover{
-  color: var(--color-white);
-} */
-
 /* Hero-banner bottom - Featured Movie Info */
 
 .header__movie--container {
@@ -204,45 +198,7 @@
   -o-border-radius: 0.3rem;
 }
 
-/* Small devices (landscape phones, 576px and up) */
-@media (max-width: 576px) {
-  .header {
-    max-height: 40rem;
-  }
-
-  .header::after {
-    height: 50rem;
-  }
-
-  .header__movie__title {
-    font-size: 3.5rem;
-  }
-
-  .button__view--info {
-    display: none;
-  }
-
-  .header__movie__rating--box {
-    padding: 2rem 0;
-    text-align: center;
-    display: block;
-    padding: 1rem;
-  }
-
-  .rating--heading {
-    display: none;
-  }
-
-  .header__movie__rating {
-    display: none;
-  }
-
-  .header__movie--cover {
-    height: 40rem;
-  }
-}
-
-/* Medium devices (tablets, 768px and up) */
+/* Medium devices (tablet) */
 @media (max-width: 899px) {
   .header {
     max-height: 60rem;
@@ -252,8 +208,16 @@
     height: 60rem;
   }
 
+  .header__navbar {
+    padding: 2rem 5rem;
+  }
+
   .header__logo {
     font-size: 2rem;
+  }
+
+  .header__search--input {
+    width: 20rem;
   }
 
   .header__movie--content {
@@ -290,5 +254,64 @@
 
   .header__movie--cover {
     height: 60rem;
+  }
+}
+
+/* Small devices (phone) */
+@media (max-width: 576px) {
+  .header {
+    max-height: 70rem;
+  }
+
+  .header::after {
+    height: 70rem;
+  }
+
+  .header__logo {
+    font-size: 2rem;
+  }
+
+  .header__search--input {
+    width: 12rem;
+    padding: 1rem;
+  }
+
+  .header__navbar {
+    padding: 2rem 4rem;
+  }
+
+  .header__navbar .button--dark {
+    padding: 1rem 1rem;
+  }
+
+  .header__navbar .button--light {
+    display: none;
+  }
+
+  .header__movie__title {
+    font-size: 3.5rem;
+  }
+
+  .button__view--info {
+    display: none;
+  }
+
+  .header__movie__rating--box {
+    padding: 2rem 0;
+    text-align: center;
+    display: block;
+    padding: 1rem;
+  }
+
+  .rating--heading {
+    display: none;
+  }
+
+  .header__movie__rating {
+    display: none;
+  }
+
+  .header__movie--cover {
+    height: 70rem;
   }
 }
