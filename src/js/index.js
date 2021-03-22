@@ -85,9 +85,9 @@ window.addEventListener('load', async function () {
       );
 
       //5) Adding single page render to movie card
-      const movieCards = document.querySelectorAll('.movie');
-      movieCards.forEach((movieCard) =>
-        movieCard.addEventListener('click', function () {
+      const movieImages = document.querySelectorAll('.movie__img__container');
+      movieImages.forEach((movieImage) =>
+        movieImage.addEventListener('click', function () {
           singleMoviePage(this);
         })
       );

@@ -4,8 +4,8 @@ import { singleMovieContent } from './single-movie-content';
 import { header } from './header';
 import { footer } from './footer';
 
-export const singleMoviePage = async (movieCard) => {
-  const root = movieCard.parentNode.parentNode.parentNode.parentNode;
+export const singleMoviePage = async (movieImage) => {
+  const root = movieImage.parentNode.parentNode.parentNode.parentNode;
 
   let rootHtmlString;
   //Showing the loader when the document start loading
@@ -14,7 +14,7 @@ export const singleMoviePage = async (movieCard) => {
 
   try {
     //fetching data from API
-    const { id, genresString } = movieCard.dataset;
+    const { id, genresString } = movieImage.dataset;
     const movie = await fetchSingleMovie(id, config);
     movie['genresString'] = genresString;
     console.log(movie);
