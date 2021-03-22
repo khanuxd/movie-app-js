@@ -1,36 +1,50 @@
+/* Targets the full dorpdown box shown initially */
+
 .select--dropdown {
+  display: flex;
+  align-items: center;
+  border: none;
+  position: relative;
+  padding: 0;
+  margin: 0;
+  width: 200px;
 }
 
-.genres__list--dropdown {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  user-select: none;
-  -webkit-padding-end: 20px;
-  -moz-padding-end: 20px;
-  -webkit-padding-start: 2px;
-  -moz-padding-start: 2px;
-  background-color: var(--color-secondary);
-  background-image: url(../../assets/img/select-arrow.svg),
-    linear-gradient(to bottom, #ffffff, #ffffff);
-  background-position: 60% center;
-  background-repeat: no-repeat;
-  background-size: contain;
-  outline: none;
-  border: none;
-  border-radius: 2px;
-  font-size: inherit;
-  overflow: hidden;
-  padding-top: 2px;
-  padding-bottom: 2px;
-  padding-left: 1rem;
-  text-overflow: ellipsis;
-  white-space: nowrap;
+/* targets the icon with the dropdown */
+
+.select--dropdown .fas {
+  padding: 5px;
+  position: absolute;
+  right: 1rem;
+  font-size: 1rem;
   cursor: pointer;
 }
 
-select::-ms-expand {
+/* will show the selected item from dropdown */
+
+.genres__list--dropdown {
+  padding: var(--gutter-vertical);
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.5rem;
+  border: none;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  cursor: pointer;
+}
+
+.genres__list--dropdown:hover {
+  color: var(--color-secondary);
+}
+
+.genres__list--dropdown .select__item {
+  padding: 2rem;
+  color: var(--color-black);
+  background: var(--color-primary);
+}
+
+.genres__list--dropdown::-ms-expand {
   display: none;
 }

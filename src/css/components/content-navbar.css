@@ -2,15 +2,25 @@
   display: flex;
   align-items: center;
   justify-content: center;
+<<<<<<< HEAD
   /* border-bottom: 1px solid var(--color-lightgrey); */
   margin-bottom: 5rem;
   position: sticky;
   top: 7rem;
   z-index: 10000;
   background: var(--color-white);
+=======
+  border-bottom: 1px solid var(--color-primary);
+  position: sticky;
+  top: 7.9rem;
+  margin: 3rem auto;
+  background: var(--color-white);
+  z-index: 1000;
+>>>>>>> responsiveFixing
 }
 
 .content__navbar__item {
+  color: var(--color-black);
   cursor: pointer;
   padding: var(--gutter-vertical);
   border-bottom: 1px solid transparent;
@@ -19,9 +29,21 @@
 
 .content__navbar__item.active {
   color: var(--color-secondary);
-  border-bottom: 1px solid var(--color-secondary);
+  border-bottom: 0.2rem solid var(--color-secondary);
 }
 
 .content__navbar__item:hover {
   color: var(--color-secondary);
+}
+
+@media (max-width: 899px) {
+  .content__navbar {
+    position: sticky;
+    top: 6.5rem;
+    text-align: center;
+  }
+
+  .content__navbar__item {
+    padding: 1rem;
+  }
 }

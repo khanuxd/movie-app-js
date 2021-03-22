@@ -1,6 +1,11 @@
 .scroll {
   background-color: var(--color-secondary);
+<<<<<<< HEAD
   transition: background-color 0.2s linear;
+=======
+  /* transition: background-color 0.2s linear; */
+  box-shadow: 0 0 1px var(--color-lightgrey);
+>>>>>>> responsiveFixing
 }
 
 .fa-star {
