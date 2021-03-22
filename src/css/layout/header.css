@@ -5,7 +5,7 @@
 }
 
 .header::after {
-  content: "";
+  content: '';
   background-color: rgba(0, 0, 0, 0.6);
   height: 70rem;
   width: 100%;
@@ -73,8 +73,7 @@
 }
 
 .header__search--input.scroll {
-  background: transparent;
-  box-shadow: none;
+  background: var(--color-black);
 }
 
 .header__search--input::placeholder {
@@ -115,6 +114,10 @@
 
 .button--dark.scroll:hover {
   color: var(--color-white);
+}
+
+.button--light.scroll:hover {
+  color: var(--color-black);
 }
 
 .header__navbar .header__mobile__menu {
