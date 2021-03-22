@@ -14,8 +14,7 @@ export const content = (movies, genres, wishlistMovies) => {
                 <div class="content__navbar__item">Top Rated</div>
                 <div class="content__navbar__item">New Arrivals</div>
                 <div class="content__navbar__item select--dropdown">
-                  ${genresDropdownList(genres)}
-                  <i class="fas fa-chevron-down"></i>
+                  ${genresDropdownList(genres)}                  
                 </div>
               </nav>
             

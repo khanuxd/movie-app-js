@@ -7,7 +7,7 @@
   position: relative;
   padding: 0;
   margin: 0;
-  width: 200px;
+  width: 12rem;
 }
 
 /* targets the icon with the dropdown */
@@ -24,9 +24,6 @@
 
 .genres__list--dropdown {
   padding: var(--gutter-vertical);
-  font-family: "Montserrat", sans-serif;
-  font-size: 1.5rem;
-  border: none;
   appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -34,10 +31,6 @@
   -webkit-user-select: none;
   -moz-user-select: none;
   user-select: none;
-  -webkit-padding-end: 20px;
-  -moz-padding-end: 20px;
-  -webkit-padding-start: 2px;
-  -moz-padding-start: 2px;
   outline: none;
   border: none;
   border-radius: 2px;
@@ -45,6 +38,7 @@
   overflow: hidden;
   text-overflow: ellipsis;
   cursor: pointer;
+  width: 100%;
 }
 
 .genres__list--dropdown:hover {
