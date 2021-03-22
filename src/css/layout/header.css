@@ -73,12 +73,8 @@
 }
 
 .header__search--input.scroll {
-<<<<<<< HEAD
-  background-color: var(--color-black);
-=======
   background: transparent;
   box-shadow: none;
->>>>>>> responsiveFixing
 }
 
 .header__search--input::placeholder {
@@ -216,11 +212,6 @@
 /* Small devices (landscape phones, 576px and up) */
 @media (max-width: 576px) {
   .header {
-<<<<<<< HEAD
-    width: 100%;
-    height: 500px;
-  }
-=======
     max-height: 40rem;
   }
 
@@ -254,13 +245,10 @@
   .header__movie--cover {
     height: 40rem;
   }
->>>>>>> responsiveFixing
 }
 
 /* Medium devices (tablets, 768px and up) */
 @media (max-width: 899px) {
-<<<<<<< HEAD
-=======
   .header {
     max-height: 60rem;
   }
@@ -318,5 +306,4 @@
   .header__movie--cover {
     height: 60rem;
   }
->>>>>>> responsiveFixing
 }
