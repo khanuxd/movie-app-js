@@ -37,6 +37,11 @@
   transition: all ease-out 0.3s;
 }
 
+.header__navbar.scroll {
+  background-color: var(--color-secondary);
+  box-shadow: 0 0 1px var(--color-lightgrey);
+}
+
 .header__logo {
   font-size: 3rem;
 }

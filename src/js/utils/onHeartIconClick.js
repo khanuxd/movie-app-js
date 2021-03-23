@@ -22,6 +22,8 @@ export const onHeartIconClick = (heartIcon) => {
     //2b) if the movie is already in the local storage, get rid of it and remove class chosen
     wishListMovies = wishListMovies.filter((item) => item.id !== movie.id);
     heartIcon.classList.remove('chosen');
+    //re-render the heart icon in trending, topRated and newArrival
+    document.querySelector(`[data-id="${id}"]`).classList.remove('chosen');
   }
 
   localStorage.setItem('wishListMovies', JSON.stringify(wishListMovies));
